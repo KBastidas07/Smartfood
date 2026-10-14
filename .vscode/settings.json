@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/.venv/Lib/site-packages",
+    "C:/Users/jupiter/AppData/Roaming/uv/python/cpython-3.14.7-windows-x86_64-none/Lib/site-packages"
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Domicilios D1: Mercado Online. ¡Si lo quieres lo tienes!",
+    "price": 0,
+    "unit": "Info Página",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "Extraído automáticamente",
+    "scraped_at": "2026-09-08T11:04:39.340693",
+    "source_url": "https://domicilios.tiendasd1.com/"
+  },
+  {
+    "name": "Ofertas Televisores, Aires acondicionados y mucho más",
+    "price": 0,
+    "unit": "Info Página",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "Extraído automáticamente",
+    "scraped_at": "2026-09-08T11:04:40.631368",
+    "source_url": "https://www.olimpica.com/"
+  }
+]

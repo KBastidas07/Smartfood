@@ -1,0 +1,15 @@
+{
+  "name": "smartfoodpop-workspace",
+  "version": "1.0.0",
+  "description": "SmartFoodPop Workspace - Popayán, Cauca",
+  "scripts": {
+    "dev": "node run-dev.js",
+    "start": "node run-dev.js",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "scrape": "python scraper/scraper.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

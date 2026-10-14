@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Leche Colanta Uht Entera 1,1 Lt X6 Unds",
+    "price": 28312,
+    "original_price": 35390,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": true,
+    "offer_desc": "Oferta VTEX",
+    "scraped_at": "2026-09-17T16:17:42.438470",
+    "source_url": "https://www.olimpica.com.co/leche-uht-colanta-entera-11-l-x6-7702129003612-1623329"
+  },
+  {
+    "name": "Leche Alpina Uht Deslactosada 1,1 Lt X6 Unds",
+    "price": 38490,
+    "original_price": 38490,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438509",
+    "source_url": "https://www.olimpica.com.co/leche-uht-alpina-deslactosada-bolsa-11-l-x6-7702001029716-1478933"
+  },
+  {
+    "name": "LECHE ALPINA DESLATOSADA 1.1L 6X5",
+    "price": 34000,
+    "original_price": 34000,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438517",
+    "source_url": "https://www.olimpica.com.co/leche-alpina-deslatosada-1-1l-6x5"
+  },
+  {
+    "name": "Leche Medalla de Oro Uht Entera 900 Ml X6 Unds",
+    "price": 19190,
+    "original_price": 19190,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438523",
+    "source_url": "https://www.olimpica.com.co/leche-uht-medalla-oro-ent-900ml-x6un"
+  },
+  {
+    "name": "Leche Medalla de Oro Uht Deslactosada 900 Ml X6 Unds",
+    "price": 19590,
+    "original_price": 19590,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438533",
+    "source_url": "https://www.olimpica.com.co/leche-uht-medalla-oro-deslac-900ml-x6un"
+  },
+  {
+    "name": "Leche Colanta Uht Deslactosada 1000 Ml X6 Unds",
+    "price": 33200,
+    "original_price": 33200,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438539",
+    "source_url": "https://www.olimpica.com.co/leche-uht-colanta-deslactosada-1000ml-x6"
+  },
+  {
+    "name": "Leche Olimpica Uht Entera 800 Ml X6 Unds",
+    "price": 18590,
+    "original_price": 18590,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438549",
+    "source_url": "https://www.olimpica.com.co/leche-uht-olimpica-ent-bsa-800ml-x6"
+  },
+  {
+    "name": "Leche Alquería Deslactosada 900 Ml X6 Unds",
+    "price": 26790,
+    "original_price": 26790,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438555",
+    "source_url": "https://www.olimpica.com.co/leche-uht-alqueria-deslac-6x900-ml-7702177004814-1232541"
+  },
+  {
+    "name": "Leche en polvo KLIM Clásica x 360 G",
+    "price": 17912,
+    "original_price": 22390,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": true,
+    "offer_desc": "Oferta VTEX",
+    "scraped_at": "2026-09-17T16:17:42.438559",
+    "source_url": "https://www.olimpica.com.co/leche-en-polvo-klim-bolsa-fortificada-instantanea-360-g-7702024034605--1650915"
+  },
+  {
+    "name": "Leche Colanta Uht Entera 1000 Ml X6 Unds",
+    "price": 32600,
+    "original_price": 32600,
+    "unit": "Unidad",
+    "store": "olimpica",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:42.438564",
+    "source_url": "https://www.olimpica.com.co/leche-uht-colanta-entera-1000ml-x6"
+  },
+  {
+    "name": "Leche Deslactosada Tetrapak UHT Latti 900 Ml",
+    "price": 3750,
+    "original_price": 3750,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342014",
+    "source_url": "https://www.d1.com.co/leche-deslac-tetrapak-uht-latti-900ml-12000245"
+  },
+  {
+    "name": "Leche Entera Tetrapak UHT Latti 900 Ml",
+    "price": 3550,
+    "original_price": 3550,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342031",
+    "source_url": "https://www.d1.com.co/leche-entera-tetrapak-uht-latti-900ml-12000543"
+  },
+  {
+    "name": "Leche Entera Bolsa UHT Latti 900 Ml",
+    "price": 3090,
+    "original_price": 3090,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342034",
+    "source_url": "https://www.d1.com.co/leche-entera-bolsa-uht-latti-900ml-12000094"
+  },
+  {
+    "name": "Leche Deslactosada Bolsa UHT Latti 900 Ml",
+    "price": 3200,
+    "original_price": 3200,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342037",
+    "source_url": "https://www.d1.com.co/leche-deslactosada-bolsa-uht-latti-900ml-12005757"
+  },
+  {
+    "name": "Leche Condensada Doypack Latti 300 Grs",
+    "price": 4200,
+    "original_price": 4200,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342040",
+    "source_url": "https://www.d1.com.co/leche-condensada-doypack-latti-300g-12000929"
+  },
+  {
+    "name": "Leche en Polvo Entera Latti 1000 Grs",
+    "price": 20900,
+    "original_price": 20900,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342043",
+    "source_url": "https://www.d1.com.co/leche-en-polvo-entera-latti-12000270"
+  },
+  {
+    "name": "Leche Deslactosada Descremada Tetrapak 900 Ml",
+    "price": 3950,
+    "original_price": 3950,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342045",
+    "source_url": "https://www.d1.com.co/leche-deslacto-descrema-tetrapak-900ml-12001742"
+  },
+  {
+    "name": "Leche en Polvo Entera Latti 350 Grs",
+    "price": 8300,
+    "original_price": 8300,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342047",
+    "source_url": "https://www.d1.com.co/leche-en-polvo-entera-latti-12003513"
+  },
+  {
+    "name": "Leche Equilibrio Tetrapak Uhtlatti 900 Ml",
+    "price": 3350,
+    "original_price": 3350,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342049",
+    "source_url": "https://www.d1.com.co/leche-equilibrio-tetrapak-uhtlatti-900ml-12005778"
+  },
+  {
+    "name": "Leche Súper Cremosa Latti X900 Ml",
+    "price": 4700,
+    "original_price": 4700,
+    "unit": "Unidad",
+    "store": "d1",
+    "is_offer": false,
+    "offer_desc": "",
+    "scraped_at": "2026-09-17T16:17:43.342051",
+    "source_url": "https://www.d1.com.co/leche-super-cremosa-latti-x900ml-12006667"
+  }
+]
