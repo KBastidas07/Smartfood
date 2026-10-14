@@ -9,12 +9,12 @@ import { useAuth } from './context/AuthContext';
 import { useProducts } from './hooks/useProducts';
 import { useFavorites } from './hooks/useFavorites';
 import { useReviews } from './hooks/useReviews';
+import { useProductDetail } from './hooks/useProductDetail';
 import { filterProducts } from './utils/filterProducts';
 import { Store, AlertCircle } from 'lucide-react';
 
 export default function App() {
   const { user, login, register, logout } = useAuth();
-  const { products, stores, categories, addProduct, updateProduct, deleteProduct } = useProducts();
   const { reviews, addReview } = useReviews(user);
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,15 +22,24 @@ export default function App() {
   const [selectedStore, setSelectedStore] = useState('all');
   const [activeTab, setActiveTab] = useState('catalog'); // 'catalog', 'offers', 'favorites'
 
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const {
+    products, catalog, stores, categories, message, error, addProduct, updateProduct, deleteProduct
+  } = useProducts({ search: searchTerm, category: selectedCategory, store: selectedStore });
+
+  const { setSelectedProduct, modalProduct, modalReviews, handleAddReview } = useProductDetail({ reviews, addReview });
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   const { favorites, toggleFavorite } = useFavorites({ user, onAuthRequired: () => setIsAuthOpen(true) });
 
+  // Búsqueda, tienda y categoría ya vienen resueltas por el backend; aquí solo se aplican las pestañas
   const filteredProducts = filterProducts({
-    products, categories, stores, favorites, searchTerm, selectedCategory, selectedStore, activeTab
+    products, categories, stores, favorites, searchTerm: '', selectedCategory: 'all', selectedStore: 'all', activeTab
   });
+
+  const emptyText = error
+    || (activeTab === 'catalog' && message)
+    || 'Intenta cambiar los términos de búsqueda o selecciona otra categoría o tienda.';
 
   return (
     <div className="app-root">
@@ -59,7 +68,7 @@ export default function App() {
               className={`category-chip ${selectedCategory === 'all' ? 'active' : ''}`}
               onClick={() => setSelectedCategory('all')}
             >
-              🏷️ Todos ({products.length})
+              🏷️ Todos ({catalog.length})
             </button>
             {categories.map(c => (
               <button 
@@ -111,7 +120,7 @@ export default function App() {
               No se encontraron productos
             </h3>
             <p style={{ fontSize: '0.9rem' }}>
-              Intenta cambiar los términos de búsqueda o selecciona otra categoría o tienda.
+              {emptyText}
             </p>
           </div>
         ) : (
@@ -133,11 +142,11 @@ export default function App() {
 
       {/* Modals */}
       <ProductDetailModal 
-        product={selectedProduct}
+        product={modalProduct}
         stores={stores}
-        reviews={reviews.filter(r => selectedProduct && r.product_id === selectedProduct.id)}
+        reviews={modalReviews}
         onClose={() => setSelectedProduct(null)}
-        onAddReview={addReview}
+        onAddReview={handleAddReview}
         user={user}
         onOpenAuth={() => {
           setSelectedProduct(null);
@@ -155,7 +164,7 @@ export default function App() {
       <AdminPanel 
         isOpen={isAdminOpen}
         onClose={() => setIsAdminOpen(false)}
-        products={products}
+        products={catalog}
         categories={categories}
         stores={stores}
         onAddProduct={addProduct}

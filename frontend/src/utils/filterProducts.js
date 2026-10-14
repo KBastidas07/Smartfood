@@ -1,10 +1,13 @@
+// Minúsculas y sin tildes; misma regla que la búsqueda del backend
+const normalizeText = (text) => String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
 // Filtrado del catálogo (RF03, RF04, RF08, RF09, RF10)
 export function filterProducts({ products, categories, stores, favorites, searchTerm, selectedCategory, selectedStore, activeTab }) {
   return products.filter(product => {
     if (searchTerm.trim()) {
-      const q = searchTerm.toLowerCase();
-      const matchName = product.name.toLowerCase().includes(q);
-      const matchDesc = (product.description || '').toLowerCase().includes(q);
+      const q = normalizeText(searchTerm.trim());
+      const matchName = normalizeText(product.name).includes(q);
+      const matchDesc = normalizeText(product.description).includes(q);
       if (!matchName && !matchDesc) return false;
     }
 

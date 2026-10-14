@@ -4,6 +4,7 @@ module.exports = (controller) => {
   const router = express.Router();
   router.get('/', controller.list);
   router.get('/offers', controller.offers);
+  router.get('/compare', controller.compare);
   router.get('/:id', controller.detail);
   return router;
 };

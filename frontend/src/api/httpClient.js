@@ -13,7 +13,9 @@ export async function request(endpoint, options = {}) {
     const res = await fetch(`${API_BASE}${endpoint}`, { ...options, headers });
     const data = await res.json();
     if (!res.ok) {
-      throw new Error(data.error || 'Error en la petición al servidor');
+      const error = new Error(data.error || 'Error en la petición al servidor');
+      error.status = res.status;
+      throw error;
     }
     return data;
   } catch (err) {

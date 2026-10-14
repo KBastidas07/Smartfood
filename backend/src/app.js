@@ -6,6 +6,7 @@ const productRoutes = require('./routes/products');
 const reviewRoutes = require('./routes/reviews');
 const favoriteRoutes = require('./routes/favorites');
 const adminRoutes = require('./routes/admin');
+const { createAuthMiddleware } = require('./middleware/authMiddleware');
 
 const authController = require('./controllers/authController');
 const productController = require('./controllers/productController');
@@ -13,8 +14,9 @@ const reviewController = require('./controllers/reviewController');
 const favoriteController = require('./controllers/favoriteController');
 const adminController = require('./controllers/adminController');
 
-function createApp({ authService, productService, reviewService, favoriteService }) {
+function createApp({ authService, tokenService, productService, productDetailService, productAdminService, productComparisonService, reviewService, favoriteService }) {
   const app = express();
+  const auth = createAuthMiddleware(tokenService);
 
   // Middlewares
   app.use(cors());
@@ -32,6 +34,7 @@ function createApp({ authService, productService, reviewService, favoriteService
         '/api/auth/login',
         '/api/products',
         '/api/products/offers',
+        '/api/products/compare',
         '/api/reviews',
         '/api/favorites',
         '/api/admin/products'
@@ -40,11 +43,11 @@ function createApp({ authService, productService, reviewService, favoriteService
   });
 
   // API Routes
-  app.use('/api/auth', authRoutes(authController(authService)));
-  app.use('/api/products', productRoutes(productController(productService)));
-  app.use('/api/reviews', reviewRoutes(reviewController(reviewService)));
-  app.use('/api/favorites', favoriteRoutes(favoriteController(favoriteService)));
-  app.use('/api/admin', adminRoutes(adminController(productService)));
+  app.use('/api/auth', authRoutes(authController(authService), auth));
+  app.use('/api/products', productRoutes(productController(productService, productDetailService, productComparisonService)));
+  app.use('/api/reviews', reviewRoutes(reviewController(reviewService), auth));
+  app.use('/api/favorites', favoriteRoutes(favoriteController(favoriteService), auth));
+  app.use('/api/admin', adminRoutes(adminController(productAdminService), auth));
 
   // Global Error Handler
   app.use((err, req, res, next) => {

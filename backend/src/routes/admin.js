@@ -1,7 +1,6 @@
 const express = require('express');
-const { authenticateToken, requireAdmin } = require('../middleware/authMiddleware');
 
-module.exports = (controller) => {
+module.exports = (controller, { authenticateToken, requireAdmin }) => {
   const router = express.Router();
   router.post('/products', authenticateToken, requireAdmin, controller.create);
   router.put('/products/:id', authenticateToken, requireAdmin, controller.update);

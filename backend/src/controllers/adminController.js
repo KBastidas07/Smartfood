@@ -1,4 +1,4 @@
-module.exports = (productService) => ({
+module.exports = (productAdminService) => ({
   create(req, res) {
     try {
       const { name, description, category_id, unit, image_url, prices } = req.body;
@@ -7,7 +7,7 @@ module.exports = (productService) => ({
         return res.status(400).json({ error: 'El nombre y la categoría son obligatorios' });
       }
 
-      const newProduct = productService.create({
+      const newProduct = productAdminService.create({
         name,
         description,
         category_id,
@@ -29,7 +29,7 @@ module.exports = (productService) => ({
 
   update(req, res) {
     try {
-      const updated = productService.update(req.params.id, req.body);
+      const updated = productAdminService.update(req.params.id, req.body);
 
       if (!updated) {
         return res.status(404).json({ error: 'Producto no encontrado' });
@@ -46,7 +46,7 @@ module.exports = (productService) => ({
 
   remove(req, res) {
     try {
-      const deleted = productService.delete(req.params.id);
+      const deleted = productAdminService.delete(req.params.id);
 
       if (!deleted) {
         return res.status(404).json({ error: 'Producto no encontrado o ya eliminado' });

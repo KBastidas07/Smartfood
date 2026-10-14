@@ -1,7 +1,12 @@
+const { parsePositiveInt } = require('../domain/queryHelpers');
+
 module.exports = (reviewService) => ({
   listByProduct(req, res) {
     try {
-      const productId = parseInt(req.params.productId);
+      const productId = parsePositiveInt(req.params.productId);
+      if (productId === null) {
+        return res.status(400).json({ error: 'El identificador del producto debe ser un entero positivo' });
+      }
       res.json({ reviews: reviewService.listByProduct(productId) });
     } catch (error) {
       res.status(500).json({ error: 'Error al consultar reseñas' });
